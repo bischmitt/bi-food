@@ -9,17 +9,16 @@ import com.bi.notification.Notification;
 @Component
 public class ClientActivationService {
 
-	@Autowired
+	@Autowired(required = false)
 	private Notification notification;
-
-//	public ClientActivationService(Notification notification) {
-//		this.notification = notification;
-//		
-//		System.out.println("ClientActivationService: " + notification );
-//	}
 
 	public void ativate(Client client) {
 		client.activate();
-		notification.notificate(client, "Seu cadastro no sistema está ativo!");
+
+		if (notification != null) {
+			notification.notificate(client, "Seu cadastro no sistema está ativo!");
+		} else {
+			System.out.println("Não existe notificador, mas cliente foi ativado!");
+		}
 	}
 }
