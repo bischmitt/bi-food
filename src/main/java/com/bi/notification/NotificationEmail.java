@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 import com.bi.model.Client;
 
-@Primary
+//@Primary
+// A anotação primary faz a desambiguação dos beans, dando prioridade ao container anotado, neste caso, o NotificationEmail
 @Component
 public class NotificationEmail implements Notification {
 	
