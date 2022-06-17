@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 
 import com.bi.model.Client;
 import com.bi.notification.Notification;
+import com.bi.notification.NotificationType;
+import com.bi.notification.UrgencyLevel;
 
 @Component
 public class ClientActivationService {
 
-	@Qualifier("urgent")
-// A anotação marcada no NotificationSMS tem que ser anotada aqui também.
+	@NotificationType(UrgencyLevel.URGENT)
 	@Autowired(required = false)
 	private Notification notification;
 

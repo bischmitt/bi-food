@@ -5,8 +5,7 @@ import org.springframework.stereotype.Component;
 
 import com.bi.model.Client;
 
-@Qualifier("urgent")
-//Outra anotação que tira a ambiguidade dos beans
+@NotificationType(UrgencyLevel.URGENT)
 @Component
 public class NotificationSMS implements Notification {
 	
