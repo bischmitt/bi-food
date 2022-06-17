@@ -1,9 +1,11 @@
 package com.bi.notification;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import com.bi.model.Client;
 
+@Primary
 @Component
 public class NotificationEmail implements Notification {
 	

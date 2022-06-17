@@ -1,7 +1,5 @@
 package com.bi.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,13 +10,15 @@ import com.bi.notification.Notification;
 public class ClientActivationService {
 
 	@Autowired(required = false)
-	private List<Notification> notifications;
+	private Notification notification;
 
 	public void ativate(Client client) {
 		client.activate();
 
-		for (Notification notification : notifications) {
+		if (notification != null) {
 			notification.notificate(client, "Seu cadastro no sistema está ativo!");
+		} else {
+			System.out.println("Não existe notificador, mas cliente foi ativado!");
 		}
 	}
 }
