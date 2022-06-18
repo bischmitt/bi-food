@@ -12,7 +12,7 @@ import com.bi.notification.UrgencyLevel;
 @Component
 public class ClientActivationService {
 
-	@NotificationType(UrgencyLevel.URGENT)
+	@NotificationType(UrgencyLevel.NORMAL)
 	@Autowired(required = false)
 	private Notification notification;
 
