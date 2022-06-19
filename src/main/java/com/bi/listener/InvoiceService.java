@@ -11,11 +11,11 @@ import com.bi.service.ActivatedClientEvent;
 
 @Component
 public class InvoiceService {
-	
+
 	@NotificationType(UrgencyLevel.NORMAL)
 	@Autowired
 	private Notification notification;
-	
+
 	@EventListener
 	public void activatedClientListener(ActivatedClientEvent event) {
 		System.out.println("Emitindo nota fiscal para cliente " + event.getClient().getName());

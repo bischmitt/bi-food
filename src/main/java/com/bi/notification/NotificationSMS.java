@@ -1,6 +1,5 @@
 package com.bi.notification;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.bi.model.Client;
