@@ -20,7 +20,7 @@ public class NotificationEmail implements Notification {
 	@Override
 	public void notificate(Client client, String message) {
 		System.out.println("Host: " + host);
-		System.out.println("Portt: " + port);
+		System.out.println("Port: " + port);
 		
 		System.out.printf("Notificando %s através do email %s: %s\n",
 				client.getName(), client.getEmail(), message);
